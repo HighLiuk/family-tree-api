@@ -4,7 +4,10 @@
   "description": "API for family trees",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index"
+    "start": "node src/index",
+    "dev": "nodemon src/index",
+    "docker:build": "docker build . -t family-tree-api",
+    "docker:up": "docker compose up -d"
   },
   "keywords": [],
   "author": "Luca Di Fazio",
