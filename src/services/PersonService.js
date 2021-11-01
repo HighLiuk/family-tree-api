@@ -5,8 +5,8 @@ class PersonService {
     return await Person.findAll()
   }
 
-  static async find(id) {
-    return await Person.findOne({ where: { id } })
+  static async find(uuid) {
+    return await Person.findOne({ where: { uuid } })
   }
 
   static async create({ name }) {

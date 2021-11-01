@@ -25,3 +25,19 @@ mutation($name: String!) {
 {
   "name": "Giuseppe Di Fazio"
 }
+
+### Retrieve a Person
+POST http://localhost:4000/
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+query($id: ID!) {
+  person(id: $id) {
+    name
+  }
+}
+
+
+{
+  "id": "0a72070c-2940-4b20-82fd-f9ab8f2b037d"
+}
