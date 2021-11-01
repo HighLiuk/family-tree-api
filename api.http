@@ -1,0 +1,27 @@
+### Get all People
+POST http://localhost:4000/
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+query {
+  people {
+    id
+    name
+  }
+}
+
+### Create a Person
+POST http://localhost:4000/
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation($name: String!) {
+  addPerson(name: $name) {
+    id
+    name
+  }
+}
+
+{
+  "name": "Giuseppe Di Fazio"
+}
