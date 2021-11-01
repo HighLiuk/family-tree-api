@@ -5,6 +5,10 @@ const schema = gql`
     people: [Person!]!
   }
 
+  type Mutation {
+    addPerson(name: String!): Person!
+  }
+
   type Person {
     id: ID!
     name: String!
