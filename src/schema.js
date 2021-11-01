@@ -3,6 +3,7 @@ const { gql } = require("apollo-server")
 const schema = gql`
   type Query {
     people: [Person!]!
+    person(id: ID!): Person
   }
 
   type Mutation {
