@@ -1,0 +1,19 @@
+{
+  "name": "family-tree-api",
+  "version": "1.0.0",
+  "description": "API for family trees",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index"
+  },
+  "keywords": [],
+  "author": "Luca Di Fazio",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "apollo-server": "^3.4.0",
+    "graphql": "^15.7.2"
+  }
+}
