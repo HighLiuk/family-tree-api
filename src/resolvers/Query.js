@@ -1,7 +1,9 @@
-function info() {
-  return "Hello World"
+const PersonService = require("../services/PersonService")
+
+async function people() {
+  return await PersonService.all()
 }
 
 module.exports = {
-  info,
+  people,
 }
