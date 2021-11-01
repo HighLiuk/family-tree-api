@@ -5,7 +5,11 @@ const Mutation = require("./resolvers/Mutation")
 
 const resolvers = { Query, Mutation }
 
-const server = new ApolloServer({ typeDefs, resolvers })
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  introspection: process.env.NODE_ENV !== "production",
+})
 
 server.listen().then(({ url }) => {
   console.log(`Server is running on port ${url}`)

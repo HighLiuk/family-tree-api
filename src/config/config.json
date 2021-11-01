@@ -10,8 +10,8 @@
   "production": {
     "username": "postgres",
     "password": "postgres",
-    "database": "family-tree-prod",
-    "host": "127.0.0.1",
+    "database": "family-tree-dev",
+    "host": "db",
     "dialect": "postgres"
   }
 }
