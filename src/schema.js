@@ -8,11 +8,18 @@ const schema = gql`
 
   type Mutation {
     addPerson(name: String!): Person!
+    addFather(childId: ID!, fatherId: ID!): FatherChild
+  }
+
+  type FatherChild {
+    father: Person!
+    child: Person!
   }
 
   type Person {
     id: ID!
     name: String!
+    father: Person
   }
 `
 
