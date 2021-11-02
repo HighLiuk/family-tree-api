@@ -18,6 +18,14 @@ class PersonService {
     return person.father
   }
 
+  static async children(uuid) {
+    const person = await Person.findOne({
+      where: { uuid },
+      include: "children",
+    })
+    return person.children
+  }
+
   static async addFather(childUuid, fatherUuid) {
     const child = await PersonService.find(childUuid)
     const father = await PersonService.find(fatherUuid)

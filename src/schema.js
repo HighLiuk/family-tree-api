@@ -20,6 +20,7 @@ const schema = gql`
     id: ID!
     name: String!
     father: Person
+    children: [Person!]!
   }
 `
 
