@@ -1,0 +1,27 @@
+### Seed The Database
+POST http://localhost:4000/
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation {
+  createPeople(input: {
+    name: "Antonino Di Fazio"
+    children: {
+      create: [
+        { node: { name: "Ignazio Di Fazio" } }
+        {
+          node: {
+            name: "Giuseppe Di Fazio"
+            children: {
+              create: { node: { name: "Luca Di Fazio" } }
+            }
+          }
+        }
+      ]
+    }
+  }) {
+    info {
+      nodesCreated
+    }
+  }
+}
