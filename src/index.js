@@ -1,14 +1,18 @@
 const { ApolloServer } = require("apollo-server")
+const { Neo4jGraphQL } = require("@neo4j/graphql")
+const neo4j = require("neo4j-driver")
 const typeDefs = require("./schema")
-const Query = require("./resolvers/Query")
-const Mutation = require("./resolvers/Mutation")
-const Person = require("./resolvers/Person")
+require("dotenv").config()
 
-const resolvers = { Query, Mutation, Person }
+const driver = neo4j.driver(
+  process.env.NEO4J_URI,
+  neo4j.auth.basic(process.env.NEO4J_USER, process.env.NEO4J_PASSWORD)
+)
+
+const { schema } = new Neo4jGraphQL({ typeDefs, driver })
 
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema,
   introspection: process.env.NODE_ENV !== "production",
 })
 
