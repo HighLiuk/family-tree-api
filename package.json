@@ -5,11 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index",
-    "dev": "nodemon src/index",
-    "db": "docker run -d -p 54321:5432 -e POSTGRES_DB=family-tree-dev -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -v db-data:/var/lib/postgresql/data --rm --name db postgres:9-alpine",
-    "psql": "docker container exec -it db psql -U postgres -d family-tree-dev",
-    "docker:build": "docker build . -t family-tree-api",
-    "docker:up": "docker compose up -d"
+    "dev": "nodemon src/index"
   },
   "keywords": [],
   "author": "Luca Di Fazio",
