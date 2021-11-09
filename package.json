@@ -11,13 +11,10 @@
   "author": "Luca Di Fazio",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.14",
-    "sequelize-cli": "^6.2.0"
+    "nodemon": "^2.0.14"
   },
   "dependencies": {
     "apollo-server": "^3.4.0",
-    "graphql": "^15.7.2",
-    "pg": "^8.7.1",
-    "sequelize": "^6.8.0"
+    "graphql": "^15.7.2"
   }
 }

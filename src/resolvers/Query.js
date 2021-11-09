@@ -1,12 +1,6 @@
-const PersonService = require("../services/PersonService")
+async function people() {}
 
-async function people() {
-  return await PersonService.all()
-}
-
-async function person(_, { id }) {
-  return await PersonService.find(id)
-}
+async function person(_, { id }) {}
 
 module.exports = {
   people,

@@ -1,16 +1,8 @@
-const PersonService = require("../services/PersonService")
+function id({ uuid }) {}
 
-function id({ uuid }) {
-  return uuid
-}
+function father({ uuid }) {}
 
-function father({ uuid }) {
-  return PersonService.father(uuid)
-}
-
-function children({ uuid }) {
-  return PersonService.children(uuid)
-}
+function children({ uuid }) {}
 
 module.exports = {
   id,

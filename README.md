@@ -1,7 +1,1 @@
-## Postgres
-
-### Sequelize
-
-```
-$ cd src && sequelize db:create
-```
+# Family Tree API
